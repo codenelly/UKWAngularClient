@@ -1,0 +1,15 @@
+<div class="container">
+     
+   <div class="row">
+       <h1>Edit Homework of Class : {{classNo}}</h1>
+   <form ng-submit="doSendHw(studHw)">
+       <h1>{{message}}</h1>
+        <div class="form-group">
+        <label for="comment">Edit Homework</label>
+        <textarea class="form-control" rows="5" id="note" ng-model="studHw"></textarea>
+
+        <button type="submit" class="btn btn-info btn-sm" ng-model="btnSel">Send </button>  
+        </div>
+   </form>
+   </div>
+</div>

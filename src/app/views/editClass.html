@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <h1> My class </h1>
+    </div>
+    <form>
+    <div class ="row">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Select </th>
+                    <th>Student No</th>
+                    <th>Student Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="s in students">
+                    <!--id="radio_{{s.studentNumber}}"-->
+                    <td><input  type="radio" name ="studSel" ng-model="$parent.result" ng-value="s.studentNumber"/></td>
+                    <td>{{s.studentNumber}}</td>
+                    <td>{{s.studentName}}</td>
+                </tr>
+            </tbody>
+        </table>
+    <div>Selected :{{result}}</div>
+        <button  ui-sref="app.studReport({studentNumber:result})">Pull Student Report</button>
+    </div>
+    </form>
+    
+</div>

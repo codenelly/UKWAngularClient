@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="row ">
+        <div class="col-xs-12 col-sm-8 col-md-12" ng-model="classNo">
+            <h1>Dear {{username}} Welcome to {{Student.studentName}} page!.</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 ">
+       <div class="card">
+         <div class="card-body">
+               <img class="card-img-top" src="images/gallery.png" alt="Gallery">
+            <h5 class="card-title">Gallery</h5>
+            <p class="card-text">Sneak peak of Your Childs Class</p>
+            <a  ui-sref="app.parentGal({classNo:classNo,studName:Student.studentName})" >View Gallery</a>
+          </div>
+        </div>
+      </div>
+        <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+              <img class="card-img-top" src="images/homework.png" alt="Todays Homework">
+            <h5 class="card-title">Homework</h5>
+            <p class="card-text">Your childs homework</p>
+            <a  ui-sref="app.parentHW" class="btn btn-primary">Check todays Homework</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+     <div class="row">
+        <div class="col-md-6">
+        <div class="card margin-top: 5px;">
+        <div class="card-body">
+              <img class="card-img-top" src="images/classroom.png" alt="Classroom">
+            <h5 class="card-title">Your Childs Report</h5>
+            <p class="card-text">Take a look of your childs latest progress report</p>
+            <a  ui-sref="app.parentStudReport({studentNumber:Student.studentNumber})" class="btn btn-primary">Student Report</a>
+          </div>
+        </div>
+      </div>
+        <div class="col-md-6">
+        <div class="card margin-top: 5px;">
+        <div class="card-body">
+              <img class="card-img-top" src="images/leave notice.png" alt="Leave Notice">
+            <h5 class="card-title">Send a leave notice</h5>
+            <p class="card-text">Leave Notice</p>
+            <a  ui-sref="app.teacherClass" class="btn btn-primary">Send Leave Info</a>
+          </div>
+        </div>
+      </div>
+    </div>
+        
+    
+    
+</div>

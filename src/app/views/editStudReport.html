@@ -1,0 +1,85 @@
+<div class="container">
+     <div class ="row">
+         <div class="col-sm-3 col-md-6 col-lg-4">
+        <table class="table table-condensed .table-bordered .table-hover">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>First term</th>
+                    <th>Second term</th>
+                    <th>Third term</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Math</td>
+                    <td >
+                        <input type="text" ng-model="studDetail.scoreMath1" name="textM1"  size="5" />
+                    </td>
+                    <td >
+                        <input type="text" ng-model="studDetail.scoreMath2" name="textM2"  size="5" />
+                    </td>
+                    <td>
+                        <input type="text" ng-model="studDetail.scoreMath3" id="textM3"  size="5" />
+                    </td>
+                </tr>
+                 <tr>
+                    <td>Science</td>
+                    <td ><input type="text" ng-model="studDetail.scoreScience1" id="textSc1"  size="5" /></td>
+                    <td ><input type="text" ng-model="studDetail.scoreScience2" id="textSc2"  size="5" /></td>
+                     <td ><input type="text" ng-model="studDetail.scoreScience3" id="textSc3"  size="5" /></td>
+                </tr>
+                <tr>
+                  
+                    <td>Reading</td>
+                    <td><input  type="text" ng-model="studDetail.scoreReading1" id="textR1"  size="5" /></td>
+                    <td><input  type="text" ng-model="studDetail.scoreReading2" id="textR2"  size="5" /></td>
+                    <td><input  type="text" ng-model="studDetail.scoreReading3" id="textR3"  size="5" /></td>
+                </tr>
+                <tr>
+                  
+                    <td>Writing</td>
+                    <td><input  type="text" ng-model="studDetail.scoreWriting1" id="textW1"  size="5" /></td>
+                    <td><input  type="text" ng-model="studDetail.scoreWriting2" id="textW2"  size="5" /></td>
+                    <td><input  type="text" ng-model="studDetail.scoreWriting3" id="textW3"  size="5" /></td>
+                </tr>
+                <tr>
+                  
+                    <td>Social Studies</td>
+                    <td><input  type="text" ng-model="studDetail.scoreSS1" id="textSS1"  size="5" /></td>
+                    <td><input  type="text" ng-model="studDetail.scoreSS2" id="textSS2"  size="5" /></td>
+                    <td><input  type="text" ng-model="studDetail.scoreSS3" id="textSS3"  size="5" /></td>
+                </tr>
+                <tr>
+                  
+                    <td>Life Skills </td>
+                    <td><input  type="text" ng-model="studDetail.scoreLifeSkills1" id="textLs1"  size="5" /></td>
+                    <td><input  type="text" ng-model="studDetail.scoreLifeSkills2" id="textLs2"  size="5" /></td>
+                    <td><input  type="text" ng-model="studDetail.scoreLifeSkills3" id="textLs3"  size="5" /></td>
+                </tr>s
+                
+            </tbody>
+        </table>
+        <button ng-click="updateStudDetail()">Save Student Report</button>
+         </div>
+         <div class="col-sm-0 col-md-1 col-lg-1">
+         </div>
+               <div class="col-sm-9 col-md-5 col-lg-7">
+                   <div class="row">
+                   <form ng-submit="doSendNote(studDetail,studNote,btnSel)">
+                        <div class="form-group">
+                        <label for="comment">Send a note </label>
+                        <textarea class="form-control" rows="5" id="note" ng-model="studNote"></textarea>
+
+                        <button type="submit" class="btn btn-info btn-sm" ng-model="btnSel" ng-click="btnSel='P'">Send to parent</button> 
+                        <button type="submit" class="btn btn-info btn-sm" ng-model ="btnSel" ng-click="btnSel='AllP'">Send to all parents</button>
+                        </div>
+                   </form>
+                   </div>
+                   <div class="row">
+                        <label for="comment">Notes</label>
+                        <textarea class="form-control" rows="10" id="notesHistory" ng-model="notesHistory"></textarea>
+                   </div>
+               </div>
+    </div>
+</div>

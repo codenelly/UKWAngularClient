@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row ">
+        <div class="col-xs-12 col-sm-8" ng-model="classNo">
+            <h1>Dear {{username}} Welcome to the your Classs Number:{{classNo}} !.</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="imgtile">
+            <a>
+            <img src="images/gallery.png" ui-sref="app.teacherGal" class="img-responsive" alt="Gallery"/>
+            </a>
+            
+        </div>
+        <div class="imgtile">
+            <img src="images/homework.png" ui-sref="app.teacherHW" class="img-responsive" alt="Todays Homework"/>
+        </div>
+        <div class="imgtile">
+            <a>
+            <img src="images/classroom.png" ui-sref="app.teacherClass({classNo:classNo})" class="img-responsive" alt="Classroom"/>
+                </a>
+        </div>
+        <div class="imgtile">
+            <img src="images/leave notice.png" ui-sref="app.teacherClass" class="img-responsive" alt="Leave notices"/>
+        </div>
+    </div>
+        
+            
+    
+    
+</div>

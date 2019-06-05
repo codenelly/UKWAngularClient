@@ -1,0 +1,24 @@
+
+<div class="container">
+<div *ngIf="studentlist.length==0" >
+    <h5>There are no students in class {{classNumber}}</h5>
+</div>
+<div *ngIf="studentlist.length>0" class="table-responsive">
+  <table class="table">
+      <thead>
+            <th>Student Id</th>
+            <th>Student Name</th>
+            <th>Parent Name</th>
+      </thead>
+      <tbody>
+          <tr *ngFor="let student of studentlist">
+              <td>{{student.id}}</td>
+              <td>{{student.studName}}</td>
+              <td>{{student.parent.firstName}}</td>
+</tr>
+</tbody>
+   
+  </table>
+</div>
+ </div>
+

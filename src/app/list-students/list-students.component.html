@@ -1,0 +1,34 @@
+
+<div class="row-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h3>Select a class to view students List</h3>
+                <form [formGroup]="listStudentsForm" (ngSubmit)="onSubmit()" autocomplete=off>
+                   
+                    <div class="form-group">
+                        <label>Class Name</label>
+                         <select formControlName="classNumber"  class="form-control" id="classlist" [ngClass]="{ 'is-invalid': submitted && f.classNumber.errors }">
+                        <option [ngValue]=""></option>
+                        <option *ngFor="let class of classlist" [value]="class.classNumber"> {{class.classNumber}}</option>
+                        </select>
+                        <div *ngIf="submitted && f.classNumber.errors" class="invalid-feedback">
+                            <div *ngIf="f.classNumber.errors.required">Class Name is required</div>
+                        </div>
+                    </div>
+                    
+                   
+                    <div class="form-group">
+                        <button class="btn btn-primary">View student List</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+      

@@ -1,0 +1,33 @@
+<div class="container">
+<div class ="jumbotron "  >
+    <h1>Welcome to UrKidsWorld!</h1> 
+  <p></p> 
+
+</div>
+
+   <div *ngIf = "auth.loggedIn()">
+       
+    
+        <p></p>
+        <p></p>
+       <p>You are logged as role - {{auth.currentUserDetailsValue.role}}</p>
+       <p>Welcome to your kids world !</p>
+        <p> Please Visit {{auth.currentUserDetailsValue.role}}s Corner to continue! </p>
+    
+    </div>
+    <div *ngIf = "!auth.loggedIn()">
+   
+              <p></p>
+        <p></p>
+        <p>Welcome to your kids world !.</p>
+  
+        <p>Please <a routerLink="/register" routerLinkActive="active-link">Sign up</a> or <a routerLink="/login" routerLinkActive="active-link">Login</a> to continue.</p>
+        </div>
+    
+</div>
+  
+
+  
+
+ 
+

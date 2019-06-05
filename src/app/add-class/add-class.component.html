@@ -1,0 +1,33 @@
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h3>Add Class</h3>
+                <form [formGroup]="classForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <label>Teacher Name</label>
+                         <select formControlName="teacher"  class="form-control" id="userlist" [ngClass]="{ 'is-invalid': submitted && f.teacher.errors }">
+                        <option [ngValue]=""></option>
+                        <option *ngFor="let user of userlist" [value]="user.userName"> {{user.userName}}</option>
+                        </select>
+                        <div *ngIf="submitted && f.teacher.errors" class="invalid-feedback">
+                            <div *ngIf="f.teacher.errors.required">Teacher Name is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>New Class Name</label>
+                        <input type="text" formControlName="classNumber" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.classNumber.errors }" />
+                        <div *ngIf="submitted && f.classNumber.errors" class="invalid-feedback">
+                            <div *ngIf="f.classNumber.errors.required">Class Name is required</div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="form-group">
+                        <button class="btn btn-primary">Add class</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
